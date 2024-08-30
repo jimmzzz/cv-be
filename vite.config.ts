@@ -9,7 +9,15 @@ export default defineConfig({
   build: {
     ssr: true,
     rollupOptions: {
-      input: './src/index.ts', // Specify your server entry point here
+      input: './api/index.ts', // Specify your server entry point here
+      output: {
+        // Output format as ES module
+        format: 'es',
+        // Specify the file extension for chunks
+        entryFileNames: '[name].mjs',
+        chunkFileNames: '[name].mjs',
+        assetFileNames: '[name].[ext]'
+      }
     },
   },
 });

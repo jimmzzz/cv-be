@@ -1,7 +1,7 @@
 {
-    "watch": ["src"],
+    "watch": ["api"],
     "ext": "ts,vue",
     "ignore": ["dist", "node_modules"],
-    "exec": "vite build && vite-node src/index.ts"
+    "exec": "vite build && vite-node api/index.ts"
 }
   
